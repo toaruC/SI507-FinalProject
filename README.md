@@ -49,6 +49,10 @@ In my project, I asked 5 of my Ins friends as test users and fetch their recent 
 
 If the grader needs to test the OAuth2 authorization code ability in "SI507F17_finalproject_oauth.py", I provided a test account that is in my sandbox list for you to use. Before using it, please remove the existing "cache_contents.json"/"creds.json", and rename the "cache_contents_test.json"/"creds_test.json" as the former two files.
 
+And then run SI507F17_finalproject.py again to OAuth2 authorize with this test account:
+```
+hy501test/12332112
+```
 
 # Other Useful Links and References
 * Instagram Api: https://www.instagram.com/developer/
