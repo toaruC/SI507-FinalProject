@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Title of the web page -->
+        <title>yanghan_507finalproject</title>
+
+        <!-- Let's add a bit of styling to make it look pretty -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    {# This is what a jinja tempalte comment looks like #}
+    <!-- This is what an HTML comment looks like -->
+
+    <body>
+        <div class="content">
+          <h1>
+            SI501F17 Final Project: Scraping Media with Instagram API
+            <br>
+            ==== by Han Yang ====
+          </h1>
+
+          <h2><p>*********************************************</p></h2>
+
+          <h2> This is a list of pictures with more than 1 tags!</h2>
+          <ul>
+          {% for item in tag_list %}
+              <li>
+                <label><b>{{item['username']}}</b> posts this photo:</label>
+                <br>
+                <img src="{{ item['img_url'] }}">
+                <br>
+                <p>with these tags: <b>{{item['tags']}}</b></p>
+                <br>
+              </li>
+          {% endfor %}
+          </ul>
+
+          <h2><p>*********************************************</p></h2>
+
+          <h2> This is a list of pictures that won more than 15 likes!</h2>
+          <ul>
+          {% for item in like_list %}
+              <li>
+                <label><b>{{item['username']}}</b> posts this photo:</label>
+                <br>
+                <img src="{{ item['img_url'] }}">
+                <br>
+                <p>wining <b>{{item['num_of_likes']}}</b> likes!</p>
+              </li>
+          {% endfor %}
+          </ul>
+
+
+        </div>
+    </body>
+</html>
